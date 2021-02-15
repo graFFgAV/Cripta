@@ -1,2 +1,2 @@
 # Cripta
- [screenshots](screenshots/filename.png)
+ [Screenshots](Screenshots/1.png)
