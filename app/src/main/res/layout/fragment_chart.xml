@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#171836"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_marginTop="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/item_background">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="6dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvY"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$0"
+                        android:textColor="#fff"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/changePercent24Hr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="6dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/constraintLayout2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_background">
+
+                        <Button
+                            android:id="@+id/buttonLandscape"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/ic_baseline_fullscreen_24" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <Button
+                            android:id="@+id/buttonYear"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="40dp"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/button_background_defult"
+                            android:text="1Y"
+                            android:textColor="@color/btnTextColor" />
+
+                        <Button
+                            android:id="@+id/buttonSixMonth"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="40dp"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/button_background_defult"
+                            android:text="6M"
+                            android:textColor="@color/btnTextColor" />
+
+                        <Button
+                            android:id="@+id/buttonOneMonth"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="40dp"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/button_background_defult"
+                            android:text="1M"
+                            android:textColor="@color/btnTextColor" />
+
+                        <Button
+                            android:id="@+id/buttonOneWeek"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="40dp"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/button_background_defult"
+                            android:text="1W"
+                            android:textColor="@color/btnTextColor" />
+
+                        <Button
+                            android:id="@+id/buttonOneDay"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="40dp"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/button_background_defult"
+                            android:text="1D"
+                            android:textColor="@color/btnTextColor" />
+
+                        <Button
+                            android:id="@+id/buttonOneHour"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="40dp"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/button_background_defult"
+                            android:text="1H"
+                            android:textColor="@color/btnTextColor" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/chart1"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+                </com.github.mikephil.charting.charts.LineChart>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/item_background">
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/sentiment_index"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:fontFamily="bold"
+                            android:text="Trader's sentiment index "
+                            android:textColor="@color/colorBorder"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/tvTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:fontFamily="bold"
+                            android:text=""
+                            android:textColor="@color/colorBorder"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent">
+                        </TextView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvSell"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:fontFamily="bold"
+                            android:text="37% Sell"
+                            android:textColor="@color/colorTextMoneyMinus"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/tvBuy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:fontFamily="bold"
+                            android:text="63% Buy"
+                            android:textColor="@color/colorTextMoneyPlus"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </TextView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <SeekBar
+                        android:id="@+id/SeeeeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_marginBottom="4dp"
+                        android:thumb = "@drawable/button_background_defult"
+                        android:progressBackgroundTint="#1BFF00"
+                        android:progressTint="#FF0000" >
+                    </SeekBar>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:fontFamily="bold"
+                            android:text="Market cap:"
+                            android:textColor="@color/colorBorder"
+                            android:textSize="17sp">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/tvMarketCap"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:fontFamily="bold"
+                            android:text="Rank"
+                            android:textColor="#fff"
+                            android:textSize="17sp">
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="13dp"
+                        android:layout_marginEnd="13dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:fontFamily="bold"
+                            android:text="Supply:"
+                            android:textColor="@color/colorBorder"
+                            android:textSize="17sp">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/tvsupply"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:fontFamily="bold"
+                            android:text="supply"
+                            android:textColor="#fff"
+                            android:textSize="17sp">
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:fontFamily="bold"
+                            android:text="Max supply:"
+                            android:textColor="@color/colorBorder"
+                            android:textSize="17sp">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/tvMaxSluppy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:fontFamily="bold"
+                            android:text="supply"
+                            android:textColor="#fff"
+                            android:textSize="17sp">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/transaction_button"
+                android:text="Add Transaction"
+                android:textColor="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/big_button_background"
+                android:layout_margin="10dp">
+            </Button>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

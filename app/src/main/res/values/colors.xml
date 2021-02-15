@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#24264d</color>
+    <color name="colorPrimaryDark">#24264d</color>
+    <color name="colorAccent">#10DFCB</color>
+    <color name="textColor">#E8E8E8</color>
+    <color name="btnTextColor">#DADADA</color>
+    <color name="colorBorder">#B5B5B5</color>
+    <color name="colorTextMoneyMinus">#EC6060</color>
+    <color name="colorTextMoneyPlus">#38E31A</color>
+    <color name="blue">#1a82c7</color>
+</resources>

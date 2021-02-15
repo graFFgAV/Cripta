@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LandscapeChart">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="10dp"
+            android:textSize="15sp"
+            android:text="Close"
+            android:textColor="#2FCEFF"
+            android:background="#00FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </Button>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </com.github.mikephil.charting.charts.LineChart>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/chart1">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="14dp"
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chart1">
+
+
+            <Button
+                android:textColor="@color/btnTextColor"
+                android:id="@+id/buttonYear"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button_background_defult"
+                android:text="Y"
+                app:layout_constraintEnd_toStartOf="@+id/buttonSixMonth"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:textColor="@color/btnTextColor"
+                android:id="@+id/buttonSixMonth"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button_background_defult"
+                android:text="6 M"
+                app:layout_constraintEnd_toStartOf="@+id/buttonOneMonth" />
+
+            <Button
+                android:textColor="@color/btnTextColor"
+                android:id="@+id/buttonOneMonth"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button_background_defult"
+                android:text="M"
+                app:layout_constraintEnd_toStartOf="@+id/buttonOneWeek" />
+
+            <Button
+                android:textColor="@color/btnTextColor"
+                android:id="@+id/buttonOneWeek"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button_background_defult"
+                android:text="W"
+                app:layout_constraintEnd_toStartOf="@+id/buttonOneDay" />
+
+            <Button
+                android:textColor="@color/btnTextColor"
+                android:id="@+id/buttonOneDay"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button_background_defult"
+                android:text="D"
+                app:layout_constraintEnd_toStartOf="@+id/buttonOneHour" />
+
+            <Button
+                android:textColor="@color/btnTextColor"
+                android:id="@+id/buttonOneHour"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button_background_defult"
+                android:text="H"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
